@@ -104,12 +104,17 @@ class DefenderSector {
 		return gradoFuerza		
 	}
 
+	//VER TEMA MUCAMA
 	method puedeSerRealizadaPor(empleado) {
 		if(empleado.fuerza() < gradoFuerza){
 			throw new FuerzaInsuficienteException()
 		}
 
 		return true
+	}
+
+	method esRealizadaPor(empleado){
+		empleado.rol().defenderSector()
 	}
 }
 
